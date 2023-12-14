@@ -6,17 +6,17 @@
 #include <vector>
 #include <ctime>
 
-class lecteur : public livre
+class Lecteur : public Livre
 {
-private:
+protected:
     std::string _nom;
     std::string _prenom;
     int _id;
     std::vector<int> _listeISBN;
 
 public:
-    lecteur(std::string _nom, std::string _prenom, int _id, std::vector<int> _listeISBN);
-    ~lecteur();
+    Lecteur(std::string _nom, std::string _prenom, int _id, std::vector<int> _listeISBN);
+    ~Lecteur();
     void setListISBN();
 };
 

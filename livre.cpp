@@ -1,11 +1,18 @@
 #include "livre.hpp"
 
-livre::livre()
+Livre::Livre()
 {
 }
 
-livre::livre(std::string titre, std::string auteur, std::string langue, std::string genre, time_t publication, int ISBN, std::vector<int> listeid) : _publication(ctime(&publication))
+Livre::Livre(std::string titre, std::string auteur, std::string langue, std::string genre, Date publication, int ISBN, std::vector<int> listeid) : _publication(publication)
 {
+    _titre = titre;
+    _auteur = auteur;
+    _langue = langue;
+    _genre = genre;
+    _publication = publication;
+    _ISBN = ISBN;
+    // std::vector<int> _listeid;
 }
 
 /*livre::datePublication()
@@ -18,12 +25,12 @@ livre::livre(std::string titre, std::string auteur, std::string langue, std::str
 
 }*/
 
-void livre::setListID() : lecteur(_id)
+void Livre::setListID() : Lecteur(_id)
 {
     _listeid.push_back(_id);
     _listeid = _listeid;
 }
 
-livre::~livre()
+Livre::~Livre()
 {
 }

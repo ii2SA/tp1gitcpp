@@ -2,16 +2,28 @@
 
 
 
-emprunt::emprunt()
+Emprunt::Emprunt()
 {
 
 }
 
-emprunt(time_t dateEmprunt, ISBN, id): _dateEmprunt(ctime(& dateEmprunt)) livre(_ISBN(ISBN)) lecteur(_id(id))
+Emprunt::Emprunt(Date dateEmprunt = (1, 31, 2023), int ISBN, int id): _dateEmprunt(dateEmprunt) Livre(_ISBN(ISBN)) Lecteur(_id(id))
 {
-return emprunt(time_t dateEmprunt, ISBN, id): _dateEmprunt(ctime(& dateEmprunt)) livre(_ISBN(ISBN))();
+
 }
 
-emprunt::~emprunt()
+Emprunt::~Emprunt()
 {
+}
+
+Emprunt::emLivre(Livre &E)
+{
+    cout<<"vous empruntez le livre E"<<
+    cout<<"vous ne porrez en emprunter un autre que si<<
+
+}
+
+Emprunt::reLivre(Livre &R)
+{
+
 }

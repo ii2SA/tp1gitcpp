@@ -1,18 +1,18 @@
 #include "lecteur.hpp"
 
-lecteur::lecteur()
+Lecteur::Lecteur()
 {
 }
-lecteur::lecteur()
+Lecteur::Lecteur()
 {
 }
 
-void lecteur::setListISBN() : livre(_id)
+void Lecteur::setListISBN() : Livre(_id)
 {
     _listeid.push_back(_ISBN);
     _listeid = _listeISBN;
 }
 
-lecteur::~lecteur()
+Lecteur::~Lecteur()
 {
 }

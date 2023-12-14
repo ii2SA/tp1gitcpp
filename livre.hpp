@@ -4,28 +4,38 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
+#include "date.hpp"
 #include <ctime>
 
-class livre : public lecteur
 
+class Livre : public Lecteur
 {
-private:
+ protected:
     std::string _titre;
     std::string _auteur;
     std::string _langue;
     std::string _genre;
-    time_t _publication;
+    Date _publication;
     int _ISBN;
     std::vector<int> _listeid;
+    Date date;
+ public:
 
-public:
-    livre();
-    ~livre();
-    livre(livre &);
-    livre(std::string titre, std::string auteur, std::string langue, std::string genre, time_t publication, int ISBN, std::vector<int> listeid);
+    ~Livre();
+    Livre(Livre &);
+    Livre(std::string titre = "none", std::string auteur="none", std::string langue="english", std::string genre="none", Date publication, int ISBN=0, std::vector<int=0> listeid);
     void setListID();
     // void datePublication();
+    std::string getTitre();
+    std::string getAuteur();
+    std::string getLangue();
+    std::string getGenre();
+    Date getPublication();
+    std::string getISBN();
+    // std::string getListID();
+
+
+
 };
 
 #endif

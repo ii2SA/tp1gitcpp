@@ -6,15 +6,17 @@
 #include <vector>
 #include <ctime>
 
-class emprunt : public livre , public lecteur
+class Emprunt : public Livre , public Lecteur
 {
-private:
-    std::string _dateEmprunt;
+protected:
+    Date _dateEmprunt;
 
 public:
-    emprunt();
-    emprunt(time_t dateEmprunt, int ISBN, int id) : _dateEmprunt(ctime(&dateEmprunt)) livre(_ISBN(ISBN)) lecteur(_id(id));
-    ~emprunt();
+    Emprunt();
+    Emprunt(Date dateEmprunt, int ISBN, int id) : _dateEmprunt(dateEmprunt) Livre(_ISBN(ISBN)) Lecteur(_id(id));
+    ~Emprunt();
+    emLivre(Livre &);
+    reLivre(Livre &);
 };
 
 #endif
