@@ -7,7 +7,7 @@
   */
 
 #include <iostream>
-#include "date.h"
+#include "date.hpp"
 
 Date::Date(int month, int day, int year) {
 	_month = month;
